@@ -1,0 +1,176 @@
+# メモ
+
+SELECT
+    rk.team_rank as '順位',
+    ts.team_name as 'チーム名',
+    rk.winnerpoint as '勝ち点',
+    rk.win as '勝ち',
+    rk.lose as '分',
+    rk.lose as '負'
+FROM
+    Jleague_Jp.team as ts
+INNER JOIN
+    Jleague_Jp.rank as rk
+ON
+    ts.team_id =rk.team_id
+WHERE
+    year= '2022'
+ORDER BY
+    rk.team_rank ASC; 
+
+
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(37,8922,1,83,26,5,3,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(38,8662,2,65,20,5,9,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(39,4809,3,63,19,6,9,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(40,7777,4,60,18,6,10,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(41,4242,5,59,18,5,11,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(42,7655,6,57,17,6,11,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(43,4852,7,52,15,7,12,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(44,1244,8,48,13,9,12,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(45,1183,9,47,14,5,15,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(46,8587,10,46,13,7,14,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(47,5553,11,43,11,10,13,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(48,3430,12,39,10,9,15,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(49,7560,13,36,7,15,12,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(50,3445,14,36,9,9,16,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(51,7463,15,33,9,6,19,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(52,4565,16,28,7,7,20,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(53,3904,17,28,6,10,18,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(54,4458,18,27,6,9,19,'2020');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(55,8922,1,92,28,8,2,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(56,1183,2,79,24,7,7,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(57,3445,3,73,21,10,7,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(58,4242,4,69,21,6,11,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(59,4809,5,66,19,9,10,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(60,8587,6,63,18,9,11,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(61,7560,7,59,16,11,11,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(62,9998,8,54,14,12,12,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(63,7655,9,53,15,8,15,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(64,3430,10,51,14,9,15,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(65,1244,11,49,12,13,13,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(66,7777,12,48,13,9,16,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(67,8662,13,44,12,8,18,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(68,4565,14,42,10,12,16,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(69,4852,15,41,12,5,21,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(70,4458,16,37,7,16,15,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(71,9197,17,36,10,6,22,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(72,5553,18,35,9,8,21,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(73,3904,19,28,5,13,20,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(74,7463,20,27,6,9,23,'2021');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(75,1183,1,68,20,8,6,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(76,8922,2,66,20,6,8,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(77,1244,3,55,15,10,9,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(78,4242,4,52,13,13,8,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(79,7777,5,51,13,12,9,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(80,7655,6,49,14,7,13,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(81,4852,7,47,13,8,13,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(82,4809,8,46,11,13,10,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(83,8587,9,45,10,15,9,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(84,3430,10,45,11,12,11,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(85,7560,11,42,9,15,10,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(86,4458,12,41,10,11,13,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(87,3445,13,40,11,7,16,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(88,9998,14,38,9,11,14,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(89,8662,15,37,9,10,15,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(90,4519,16,36,8,12,14,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(91,4565,17,33,7,12,15,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(92,5293,18,30,6,12,16,'2022');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(93,3445,1,71,21,8,5,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(94,1183,2,64,19,7,8,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(95,1244,3,58,17,7,10,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(96,8587,4,57,15,12,7,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(97,4242,5,52,14,10,10,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(98,4809,6,52,14,10,10,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(99,9998,7,51,15,6,13,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(100,8922,8,50,14,8,12,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(101,7777,9,49,15,4,15,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(102,9672,10,45,11,12,11,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(103,7655,11,43,12,7,15,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(104,3430,12,40,10,10,14,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(105,4519,13,40,12,4,18,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(106,7560,14,38,9,11,14,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(107,4458,15,34,8,10,16,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(108,8662,16,34,9,7,18,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(109,4852,17,33,6,15,13,'2023');
+INSERT INTO Jleague_JP.rank(rank_id,team_id,team_rank,winnerpoint,win,draw,lose,year)VALUES(110,7463,18,29,7,8,19,'2023');
+
+
+// const RankingDate:Date[]=[
+//   {team_rank:1,teamName:'北海道コンサドーレ札幌',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:2,teamName:'サンフレッチェ広島',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:3,teamName:'鹿島アントラーズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:4,teamName:'名古屋グランパス',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:5,teamName:'東京ヴェルディ',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:6,teamName:'サガン鳥栖',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:7,teamName:'アビスパ福岡',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:8,teamName:'FC琉球',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:9,teamName:'ベガルタ仙台',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:10,teamName:'町田ゼルビア',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:11,teamName:'FC東京',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:12,teamName:'ガンバ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:13,teamName:'浦和レッズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:14,teamName:'横浜F・マリノス',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:15,teamName:'清水エスパルス',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:16,teamName:'柏レイソル',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:17,teamName:'横浜FC',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:18,teamName:'セレッソ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2023'},
+//   {team_rank:1,teamName:'サンフレッチェ広島',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:2,teamName:'鹿島アントラーズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:3,teamName:'大分トリニータ',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:4,teamName:'北海道コンサドーレ札幌',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:5,teamName:'名古屋グランパス',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:6,teamName:'大宮アルディージャ',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:7,teamName:'徳島ヴォルティス',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:8,teamName:'松本山雅',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:9,teamName:'ファジアーノ岡山',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:10,teamName:'町田ゼルビア',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:11,teamName:'FC東京',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:12,teamName:'ガンバ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:13,teamName:'浦和レッズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:14,teamName:'横浜F・マリノス',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:15,teamName:'清水エスパルス',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:16,teamName:'ジュビロ磐田',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:17,teamName:'柏レイソル',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:18,teamName:'セレッソ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2022'},
+//   {team_rank:1,teamName:'浦和レッズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:2,teamName:'ジェフユナイテッド千葉',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:3,teamName:'大分トリニータ',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:4,teamName:'北海道コンサドーレ札幌',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:5,teamName:'愛媛FC',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:6,teamName:'レノファ山口',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:7,teamName:'ベガルタ仙台',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:8,teamName:'松本山雅',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:9,teamName:'ファジアーノ岡山',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:10,teamName:'町田ゼルビア',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:11,teamName:'FC東京',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:12,teamName:'ガンバ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:13,teamName:'鹿島アントラーズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:14,teamName:'横浜F・マリノス',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:15,teamName:'清水エスパルス',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:16,teamName:'ジュビロ磐田',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:17,teamName:'柏レイソル',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:18,teamName:'セレッソ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:19,teamName:'徳島ヴォルティス',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:20,teamName:'FC琉球',winnerpoint:23,win:23,draw:3,lose:4,year:'2021'},
+//   {team_rank:1,teamName:'鹿島アントラーズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:2,teamName:'FC東京',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:3,teamName:'大分トリニータ',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:4,teamName:'北海道コンサドーレ札幌',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:5,teamName:'名古屋グランパス',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:6,teamName:'大宮アルディージャ',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:7,teamName:'徳島ヴォルティス',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:8,teamName:'松本山雅',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:9,teamName:'ファジアーノ岡山',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:10,teamName:'町田ゼルビア',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:11,teamName:'FC東京',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:12,teamName:'ガンバ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:13,teamName:'浦和レッズ',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:14,teamName:'横浜F・マリノス',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:15,teamName:'清水エスパルス',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:16,teamName:'ジュビロ磐田',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:17,teamName:'柏レイソル',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:18,teamName:'セレッソ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2020'},
+//   {team_rank:1,teamName:'横浜F・マリノス',winnerpoint:23,win:23,draw:3,lose:4,year:'2019'},
+//   {team_rank:1,teamName:'ガンバ大阪',winnerpoint:23,win:23,draw:3,lose:4,year:'2018'},
+
+// ];

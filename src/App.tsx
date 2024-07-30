@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import SideBar from './components/SideBar';
+import { Box, Toolbar } from '@mui/material';
+import { Route,BrowserRouter as Router,Routes } from 'react-router-dom';
+import Rank from './pages/Rank';
+import Result from './pages/Result';
+import { ThemeProvider } from '@emotion/react';
+import { thema } from './thema/thema';
+import { CssBaseline } from '@mui/material';
 
-function App() {
+const drawerWidth=240;
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<ThemeProvider theme={thema}>
+<CssBaseline/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SideBar/>}>
+        <Route index element={<Rank/>}/>
+        <Route path='/result' element={<Result/>}/>
+        </Route>
+      </Routes>
+    </Router>
+    </ThemeProvider>
+  )
 }
 
 export default App;

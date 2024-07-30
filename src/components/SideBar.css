@@ -1,0 +1,13 @@
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar .logo img {
+  width: 200px;
+  margin-right: 7px; /* 右側に余白を追加 */
+  padding-top: 10px;
+}
+
