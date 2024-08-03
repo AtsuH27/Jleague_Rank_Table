@@ -8,21 +8,26 @@ table {
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
-  
+  text-align: left; 
 }
 
 th {
   background-color: #f2f2f2;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #ffffff;
-}
 .logo {
   vertical-align: bottom;
+}
+.rule{
+  background-color:#F0FFFF;
+}
+
+.acl{
+  background-color:#FFFFCC;
+}
+.play_off{
+  background-color: #CCFFFF;
+}
+.relegation{
+  background-color: #bfbfbf;
 }

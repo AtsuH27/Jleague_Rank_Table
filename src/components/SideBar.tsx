@@ -21,9 +21,6 @@ import Logo from "../images/jleague-logo/logo.png"
 import Logo2019 from "../images/jleague-logo/j-logo-2019-present.png";
 import './SideBar.css';
 
-
-
-
 const drawerWidth = 240;
 
 export default function PermanentDrawerLeft() {

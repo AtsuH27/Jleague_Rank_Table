@@ -68,6 +68,7 @@ app.get('/logo',(res,req) => {
 // ランキングデータを取得する
 app.get('/ranking', (req, res) => {
     const year = req.query.year;
+    const sortOrder = req.query.sortOrder === 'DESC' ? 'DESC' : 'ASC';
     const sql = `
     SELECT
         rk.team_rank,
@@ -76,7 +77,10 @@ app.get('/ranking', (req, res) => {
         rk.winnerpoint,
         rk.win,
         rk.draw,
-        rk.lose
+        rk.lose,
+        rk.acl_zone,
+        rk.relegation_zone,
+        rk.play_off_zone
     FROM
        Jleague_Jp.team AS t
     INNER JOIN
@@ -90,7 +94,7 @@ app.get('/ranking', (req, res) => {
     WHERE
         rk.year = ?
     ORDER BY
-        rk.team_rank ASC
+        rk.team_rank ${sortOrder}
     `;
     db.query(sql, [year], (err, results) => {
         if (err) {
