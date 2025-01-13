@@ -1,0 +1,11 @@
+/*src/ResultDetail.css*/
+
+.ReplayIcon{
+    cursor: pointer;
+}
+
+.ReplayIcon:hover{
+    box-shadow: none;
+    transform: translate(1.5px,1.5px);
+    transition: all 0.1s;
+}

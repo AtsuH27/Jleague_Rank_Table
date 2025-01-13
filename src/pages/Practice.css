@@ -1,0 +1,49 @@
+.match {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border: 2px solid rgb(67, 74, 6);
+    padding: 15px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+.round {
+    font-size: 18px;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.match_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* 要素間の余白を追加 */
+}
+
+.home_team_name, .away_team_name {
+    font-size: 25px;
+    flex: 1; /* 要素の幅を均等にする */
+    text-align: center;
+}
+
+.home_team-logo, .away_team-logo {
+    height: 4em; /* 高さをテキストの行に合わせて調整 */
+    width: auto;
+    vertical-align: middle;
+    margin: 0 10px; /* ロゴの左右に余白を設定 */
+}
+
+.home_team_score, .away_team_score {
+    font-size: 30px;
+    font-weight: bold;
+    width: 50px; /* 固定幅でスコアの幅を統一 */
+    text-align: center;
+}
+
+.midle {
+    font-size: 30px;
+    margin: 0 10px;
+    text-align: center;
+    width: 20px; /* 固定幅でスコア間のスペースを確保 */
+}

@@ -11,12 +11,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { Outlet, useNavigate } from 'react-router-dom';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
-import J1logoIcon from "./logo.png";
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import Logo from "../images/jleague-logo/logo.png"
 import Logo2019 from "../images/jleague-logo/j-logo-2019-present.png";
 import './SideBar.css';
@@ -32,9 +30,12 @@ export default function PermanentDrawerLeft() {
       navigate('/')
     }else if(index === 1){
       navigate('/result');
+    }else if(index ===2 ){
+      navigate('clubDetail');
     }
   };
-
+  
+  
 
 
   return (
@@ -69,7 +70,7 @@ export default function PermanentDrawerLeft() {
         variant="permanent"
         anchor="left"
       >
-        
+
         <Toolbar className='ToolbarSide' style={{display:'flex',justifyContent:'center',alignItems:'center',background:'#303030'}}>
           <div className='Logo2019' style={{display:'flex',alignItems:'center'}}>
             <img src={Logo2019} alt='Logo' style={{'width':'45px',height:'auto',alignItems:'center'}}/>
@@ -77,11 +78,11 @@ export default function PermanentDrawerLeft() {
             </Toolbar>
         <Divider />
         <List>
-          {['順位', '試合結果'].map((text, index) => (
+          {['順位', '試合結果','クラブ Detail'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={()=>handleListItemClick(index)}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <TableRowsIcon /> : <ScoreboardIcon />}
+                  {index % 3 === 0 ? <TableRowsIcon /> : (index % 3===1?<ScoreboardIcon />:<SportsSoccerIcon/>)}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>

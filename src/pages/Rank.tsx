@@ -1,9 +1,8 @@
-import { InputWrapper } from '@mantine/core';
+import { InputWrapper, Title } from '@mantine/core';
 import { NativeSelect } from '@mui/material';
 import './RankingTable.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Users } from 'tabler-icons-react';
 
 interface Date {
   team_rank: number;
@@ -59,9 +58,10 @@ const Rank: React.FC = () => {
   const handleSort=()=>{
     setSortOrder(prevOrder=>prevOrder==='ASC'?'DESC':'ASC');
   };
-  
+
   return (
     <>
+      <Title>年間順位</Title>
       <InputWrapper label="シーズン" />
       <NativeSelect value={selectYear} onChange={handleChange}>
         {years?.map((year) => (
@@ -100,19 +100,19 @@ const Rank: React.FC = () => {
         </tbody>
       </table>
       <div className='rule'>
-      <h3>J1試合方式および勝敗の決定</h3>
-      <h4>90分間(前半&後半45分)の試合を行い、勝敗が決しない場合は引き分けとする。</h4>
-      <li>勝点</li>
-      <h4>勝利 : 3点, 引き分け : 1点, 敗戦 : 0点</h4>
-      <h4>ACL出場圏内 プレーオフ出場圏 J2自動降格圏内</h4>
-      <li>年間順位の決定</li>
-      <ol>
-        <li>得失点差</li>
-        <li>総得点数</li>
-        <li>当該チーム間の対戦成績(イ:勝ち点,ロ:得失点差,ハ:総得点差)</li>
-        <li>反則ポイント</li>
-        <li>抽選</li>
-      </ol>
+        <h3>J1試合方式および勝敗の決定</h3>
+        <h4>90分間(前半&後半45分)の試合を行い、勝敗が決しない場合は引き分けとする。</h4>
+        <li>勝点</li>
+        <h4>勝利 : 3点, 引き分け : 1点, 敗戦 : 0点</h4>
+        <h4>ACL出場圏内 プレーオフ出場圏 J2自動降格圏内</h4>
+        <li>年間順位の決定</li>
+        <ol>
+          <li>得失点差</li>
+          <li>総得点数</li>
+          <li>当該チーム間の対戦成績(イ:勝ち点,ロ:得失点差,ハ:総得点差)</li>
+          <li>反則ポイント</li>
+          <li>抽選</li>
+        </ol>
       </div>
     </>
   );
