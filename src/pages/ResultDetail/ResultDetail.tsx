@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import './ResultDetail.css';
-import { response } from 'express';
 
 interface matchData{
     home_team_name:string;
@@ -27,29 +26,32 @@ const ResultDetail = () => {
     const handleIconClick=()=>{
         navigate('/result');
     };
-    useEffect(() => {
-        const fetchMatchData = async () => {
-            try {
-                const response = await fetch(`/matches?year=${year}&team_id=${team_id}`);
-                if (!response.ok) {
-                    const errorResponseText = await response.text();
-                    console.log('エラーテキスト',errorResponseText);
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                console.log('データのログ data',data);
-                setMatchData(data);
-            } catch (error) {
-                console.log('Error fetching match data:', error);
-            }
-        };
-        if (year && team_id) {
-            fetchMatchData();
-        }
-        console.log('ああteam_id:', team_id);
-        console.log('ああteam_id:', team_id);
-        console.log('おおyear:', year);
-    }, [year, team_id]);
+
+    //デーベースへの接続は一旦コメントアウト
+
+    // useEffect(() => {
+    //     const fetchMatchData = async () => {
+    //         try {
+    //             const response = await fetch(`/matches?year=${year}&team_id=${team_id}`);
+    //             if (!response.ok) {
+    //                 const errorResponseText = await response.text();
+    //                 console.log('エラーテキスト',errorResponseText);
+    //                 throw new Error(`HTTP error! status: ${response.status}`);
+    //             }
+    //             const data = await response.json();
+    //             console.log('データのログ data',data);
+    //             setMatchData(data);
+    //         } catch (error) {
+    //             console.log('Error fetching match data:', error);
+    //         }
+    //     };
+    //     if (year && team_id) {
+    //         fetchMatchData();
+    //     }
+    //     console.log('ああteam_id:', team_id);
+    //     console.log('ああteam_id:', team_id);
+    //     console.log('おおyear:', year);
+    // }, [year, team_id]);
 
     return (
         <>

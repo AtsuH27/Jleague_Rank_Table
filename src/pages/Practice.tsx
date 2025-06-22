@@ -57,7 +57,6 @@ const Practice = () => {
         <ReplyAllIcon onClick={handleChange}/>
         <div className='team'>
         {mockDate.map((item:mockMatch)=>(
-            
             <div className='match'>
                 <h4 className='round'>第{item.round}節</h4>
                     <div className='match_detail'>

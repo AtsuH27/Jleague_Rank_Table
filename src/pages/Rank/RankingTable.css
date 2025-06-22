@@ -20,14 +20,26 @@ th {
 }
 .rule{
   background-color:#F0FFFF;
+  border: 5px double #000000;
 }
 
 .acl{
-  background-color:#FFFFCC;
+  background-color:#ccffd1;
 }
 .play_off{
   background-color: #CCFFFF;
 }
 .relegation{
   background-color: #bfbfbf;
+}
+
+tbody tr:hover{
+  background-color: #f6e7e7;
+}
+.select-box{
+  font-size: 100%;
+  font-family:sans-serif;
+  border-radius: 10%;
+  background-color: #f7f9f9;
+  color: #000000;
 }

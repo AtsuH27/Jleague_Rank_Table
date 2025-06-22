@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left; 
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.logo {
+  vertical-align: bottom;
+}
+
+.acl{
+  background-color:#ccffd1;
+}
+.play_off{
+  background-color: #CCFFFF;
+}
+.relegation{
+  background-color: #bfbfbf;
+}
+
+tbody tr:hover{
+  background-color: #f6e7e7;
+}

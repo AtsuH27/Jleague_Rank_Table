@@ -19,35 +19,38 @@ const Result: React.FC = () => {
     setSelectYear(e.target.value);
   };
 
-  useEffect(() => {
-    const fetchYears = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/years');
-        setYears(response.data);
-      } catch (error) {
-        console.error('Error fetching years:', error);
-      }
-    };
-    fetchYears();
-  }, []);
 
-  useEffect(() => {
-    const fetchTeams = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/teams', {
-          params: { year: selectYear },
-        });
-        setTeams(response.data);
-      } catch (error) {
-        console.error('Error fetching teams:', error);
-      }
-    };
-    fetchTeams();
-  }, [selectYear]);
+  //デーベースへの接続をいったんコメントアウト
 
-  const handleLogoClick = (team_id: number) => {
-    window.location.href = `/result/${team_id}?year=${selectYear}`;
-  };
+  // useEffect(() => {
+  //   const fetchYears = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:5000/years');
+  //       setYears(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching years:', error);
+  //     }
+  //   };
+  //   fetchYears();
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchTeams = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:5000/teams', {
+  //         params: { year: selectYear },
+  //       });
+  //       setTeams(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching teams:', error);
+  //     }
+  //   };
+  //   fetchTeams();
+  // }, [selectYear]);
+
+  // const handleLogoClick = (team_id: number) => {
+  //   window.location.href = `/result/${team_id}?year=${selectYear}`;
+  // };
 
   return (
     <>
@@ -70,7 +73,7 @@ const Result: React.FC = () => {
             key={team.team_id}
             src={`${process.env.PUBLIC_URL}/images/clublogo/${team.logo_url}`}
             alt={team.team_name}
-            onClick={()=>handleLogoClick(team.team_id)}
+            // onClick={()=>handleLogoClick(team.team_id)}
             className="team-logo"
 
           />
