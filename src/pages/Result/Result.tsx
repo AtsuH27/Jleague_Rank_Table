@@ -1,8 +1,8 @@
-import { InputWrapper } from '@mantine/core';
-import { NativeSelect } from '@mui/material';
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import './Result.css';
+import { InputWrapper } from "@mantine/core";
+import { NativeSelect } from "@mui/material";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "./Result.css";
 
 interface Team {
   team_id: number;
@@ -11,14 +11,13 @@ interface Team {
 }
 
 const Result: React.FC = () => {
-  const [selectYear, setSelectYear] = useState<string>('2023');
+  const [selectYear, setSelectYear] = useState<string>("2023");
   const [years, setYears] = useState<string[]>([]);
   const [teams, setTeams] = useState<Team[]>([]);
 
   const handleYearChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectYear(e.target.value);
   };
-
 
   //デーベースへの接続をいったんコメントアウト
 
@@ -69,16 +68,19 @@ const Result: React.FC = () => {
       <div className="logos">
         {teams.map((team) => (
           <td>
-          <img
-            key={team.team_id}
-            src={`${process.env.PUBLIC_URL}/images/clublogo/${team.logo_url}`}
-            alt={team.team_name}
-            // onClick={()=>handleLogoClick(team.team_id)}
-            className="team-logo"
-
-          />
-          <a href={`result/${team.team_id}?year=${selectYear}`} font-size='10px'>{team.team_name}</a>
-          
+            <img
+              key={team.team_id}
+              src={`${process.env.PUBLIC_URL}/images/clublogo/${team.logo_url}`}
+              alt={team.team_name}
+              // onClick={()=>handleLogoClick(team.team_id)}
+              className="team-logo"
+            />
+            <a
+              href={`result/${team.team_id}?year=${selectYear}`}
+              font-size="10px"
+            >
+              {team.team_name}
+            </a>
           </td>
         ))}
       </div>

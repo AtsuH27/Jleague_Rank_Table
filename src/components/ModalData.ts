@@ -1,52 +1,171 @@
-
-
-export interface modalData{
-  teamName:string;
-  year:string;
-  rank:number;
-  photo:string;
-  text:string;
-  logo_url:string;
- };
-
-export const teamModalData:modalData[]=[
-  {
-    teamName:"北海道コンサドーレ札幌",  
-    year:"2021",
-    rank:10,
-    photo:"2021sapporo.jpg",
-    logo_url: 'sapporo-logo.png',
-    text:"北海道コンサドーレ札幌は2021年シーズンを10位で終えた。今シーズンの後半は前線での激しいプレスからボールを奪取して、ショートカウンターで得点をもぎ取るシーンが多くなってきた。2020年途中からスタートした「オールコートマンツーマンディフェンス」の戦術も、段々と成熟してきた印象がある。"
-},
-  {
-    teamName:"北海道コンサドーレ札幌",  
-    year:"2022",
-    rank:10,
-    photo:"2022sapporo.jpg",
-      logo_url: 'sapporo-logo.png',
-    text:"シーズン中盤は残留争いに巻き込まれてしまったが、攻撃的なスタイルを継続させ、最終的に10位でシーズンを終えた。興梠慎蔵、ガブリエルシャビエル、小柏剛、青木亮太、金子拓郎といった攻撃的な選手を中心にチームのスタイルを牽引し、守備では岡村大八や田中駿太などが活躍した。",
-},
-{
-    teamName:"アビスパ福岡",  
-    year:"2022",
-    rank:14,
-    photo:"2022fukuoka.jpg",
-    logo_url: 'fukuoka-logo.png',
-    text:"J1で2年目の今季は14位でフィニッシュし、2年連続J1残留を果たすことが出来た。",
-},
-{
-    teamName:"清水エスパルス",  
-    year:"2022",
-    rank:17,
-    photo:"2022shimizu.jpg",
-    logo_url: 'shimizu-logo.png',
-    text:"2022シーズン、清水エスパルスはクラブ史上2度目のJ2降格となった。シーズン序盤からチームは低迷し、夏の大型補強も実らず、9月以降は7戦勝ちなしで最終順位は17位。 クラブ創設30周年の節目で陥落した。",
-},{
-    teamName:"北海道コンサドーレ札幌",  
-    year:"2023",
-    rank:12,
-    photo:"2023sapporo.jpg",
-    logo_url: 'sapporo-logo.png',
-    text:"ペドロビッチ政権6年目を迎えた2023年。シーズン前半で7勝5分5敗、勝ち点26を獲得していたにもかかわらず、シーズン後半で3勝5分9敗、獲得した勝ち点は14（前半戦の勝ち点のほぼ半分）にとどまり、後半戦で大きく失速した格好となった。また、今シーズンをもってクラブの象徴小野伸二が現役引退を発表。チームを退団することになった。",
+export interface modalData {
+  teamName: string;
+  year: string;
+  rank: number;
+  photo: string;
+  text: string;
+  logo_url: string;
 }
+
+export const teamModalData: modalData[] = [
+  {
+    teamName: "北海道コンサドーレ札幌",
+    year: "2021",
+    rank: 10,
+    photo: "2021sapporo.jpg",
+    logo_url: "sapporo-logo.png",
+    text: "北海道コンサドーレ札幌は2021年シーズンを10位で終えた。今シーズンの後半は前線での激しいプレスからボールを奪取して、ショートカウンターで得点をもぎ取るシーンが多くなってきた。2020年途中からスタートした「オールコートマンツーマンディフェンス」の戦術も、段々と成熟してきた印象がある。",
+  },
+  {
+    teamName: "横浜F・マリノス",
+    year: "2022",
+    rank: 1,
+    photo: "2022marinosu.jpg",
+    logo_url: "marinos-logo.png",
+    text: "リーグ優勝",
+  },
+  {
+    teamName: "川崎フロンターレ",
+    year: "2022",
+    rank: 2,
+    photo: "2022kawasaki.jpg",
+    logo_url: "kawasaki-logo.png",
+    text: "リーグ2位に輝く",
+  },
+  {
+    teamName: "サンフレッチェ広島",
+    year: "2022",
+    rank: 3,
+    photo: "2022hiroshima.jpg",
+    logo_url: "sanfrecce-logo.png",
+    text: "リーグ３位でフィニッシュ。",
+  },
+  {
+    teamName: "鹿島アントラーズ",
+    year: "2022",
+    rank: 4,
+    photo: "2022kashima.jpg",
+    logo_url: "kashima-logo.png",
+    text: "シーズン4位でフィニッシュ。",
+  },
+  {
+    teamName: "セレッソ大阪",
+    year: "2022",
+    rank: 5,
+    photo: "2022seresso.jpg",
+    logo_url: "seresso-logo.png",
+    text: "シーズン5位でフィニッシュ。",
+  },
+  {
+    teamName: "FC東京",
+    year: "2022",
+    rank: 6,
+    photo: "2022fctokyo.jpg",
+    logo_url: "fctokyo-logo.png",
+    text: "シーズン6位でフィニッシュ。",
+  },
+  {
+    teamName: "柏レイソル",
+    year: "2022",
+    rank: 7,
+    photo: "2022kashiwa.jpg",
+    logo_url: "kashiwa-logo.png",
+    text: "シーズン7位フィニッシュ。",
+  },
+  {
+    teamName: "名古屋グランパス",
+    year: "2022",
+    rank: 8,
+    photo: "2022nagoya.jpg",
+    logo_url: "nagoya-logo.png",
+    text: "シーズン８位でフィニッシュ。",
+  },
+  {
+    teamName: "浦和レッズ",
+    year: "2022",
+    rank: 9,
+    photo: "2022urawa.jpg",
+    logo_url: "urawa-logo.png",
+    text: "シーズン9位でフィニッシュ。",
+  },
+  {
+    teamName: "北海道コンサドーレ札幌",
+    year: "2022",
+    rank: 10,
+    photo: "2022sapporo.jpg",
+    logo_url: "sapporo-logo.png",
+    text: "シーズン中盤は残留争いに巻き込まれてしまったが、攻撃的なスタイルを継続させ、最終的に10位でシーズンを終えた。興梠慎蔵、ガブリエルシャビエル、小柏剛、青木亮太、金子拓郎といった攻撃的な選手を中心にチームのスタイルを牽引し、守備では岡村大八や田中駿太などが活躍した。",
+  },
+  {
+    teamName: "サガン鳥栖",
+    year: "2022",
+    rank: 11,
+    photo: "2022tosu.jpg",
+    logo_url: "tosu-logo.png",
+    text: "シーズン11位でフィニッシュ。",
+  },
+  {
+    teamName: "湘南ベルマーレ",
+    year: "2022",
+    rank: 12,
+    photo: "2022shonan.jpg",
+    logo_url: "shonan-logo.png",
+    text: "シーズン12位でフィニッシュ。。",
+  },
+  {
+    teamName: "ヴィッセル神戸",
+    year: "2022",
+    rank: 13,
+    photo: "2022kobe.jpg",
+    logo_url: "kobe-logo.png",
+    text: "シーズン13位でフィニッシュ。",
+  },
+  {
+    teamName: "アビスパ福岡",
+    year: "2022",
+    rank: 14,
+    photo: "2022fukuoka.jpg",
+    logo_url: "fukuoka-logo.png",
+    text: "J1で2年目の今季は14位でフィニッシュし、2年連続J1残留を果たすことが出来た。",
+  },
+  {
+    teamName: "ガンバ大阪",
+    year: "2022",
+    rank: 15,
+    photo: "2022ganba.jpg",
+    logo_url: "ganba-logo.png",
+    text: "シーズン15位でフィニッシュ。",
+  },
+  {
+    teamName: "京都サンガF.C.",
+    year: "2022",
+    rank: 16,
+    photo: "2022kyoto.jpg",
+    logo_url: "kyoto-logo.png",
+    text: "シーズン16位でフィニッシュ。",
+  },
+  {
+    teamName: "清水エスパルス",
+    year: "2022",
+    rank: 17,
+    photo: "2022shimizu.jpg",
+    logo_url: "shimizu-logo.png",
+    text: "2022シーズン、清水エスパルスはクラブ史上2度目のJ2降格となった。シーズン序盤からチームは低迷し、夏の大型補強も実らず、9月以降は7戦勝ちなしで最終順位は17位。 クラブ創設30周年の節目で陥落した。",
+  },
+  {
+    teamName: "ジュビロ磐田",
+    year: "2022",
+    rank: 18,
+    photo: "2022iwata.jpg",
+    logo_url: "iwata-logo.png",
+    text: "2022シーズン、昇格後わずか1年で無念の最下位での降格になった。",
+  },
+  {
+    teamName: "北海道コンサドーレ札幌",
+    year: "2023",
+    rank: 12,
+    photo: "2023sapporo.jpg",
+    logo_url: "sapporo-logo.png",
+    text: "ペドロビッチ政権6年目を迎えた2023年。シーズン前半で7勝5分5敗、勝ち点26を獲得していたにもかかわらず、シーズン後半で3勝5分9敗、獲得した勝ち点は14（前半戦の勝ち点のほぼ半分）にとどまり、後半戦で大きく失速した格好となった。また、今シーズンをもってクラブの象徴小野伸二が現役引退を発表。チームを退団することになった。",
+  },
 ];

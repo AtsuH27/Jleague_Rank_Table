@@ -1,11 +1,11 @@
-#overlay{
+#overlay {
   /*画面全体を覆う設定*/
-  position:fixed;
-  top:0;
-  left:0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height:100%;
-  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   /*画面の中央に要素を表示させる設定*/
   display: flex;
   align-items: center;
@@ -14,21 +14,40 @@
   animation: fadeInOverlay 0.3s ease forwards;
 }
 
-
-
 /*モーダルの画面デザイン*/
 
-#content{
+#content {
   border-radius: 2%;
-    z-index: 2;
-    width: 50%;
-    padding: 1em;
-    background-color: #fff;
-    animation: scaleInContent 0.4s ease forwards;
+  z-index: 2;
+  width: 50%;
+  padding: 1em;
+  background-color: #fff;
+  animation: scaleInContent 0.4s ease forwards;
 }
 
-.year{
+.year {
   background-color: rgb(136, 129, 129);
   border: 5px double #edeaea;
   color: #fff;
+}
+.prevButton,
+.nextButton {
+  background-color: rgb(255, 165, 0);
+  color: #fff;
+  border: none;
+  margin-top: 3px;
+  border-radius: 100vh;
+  cursor: pointer;
+  width: 60px;
+  padding: 5px;
+}
+.prevDisabledButton,
+.nextDisabledButton {
+  background-color: rgb(116, 110, 99);
+  color: #fff;
+  border: none;
+  margin-top: 3px;
+  border-radius: 100vh;
+  width: 60px;
+  padding: 5px;
 }

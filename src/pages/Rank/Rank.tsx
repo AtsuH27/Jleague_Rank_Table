@@ -1,37 +1,32 @@
-import { InputWrapper, Title } from '@mantine/core';
-import './RankingTable.css';
-import React, {  useState } from 'react';
+import { InputWrapper, Title } from "@mantine/core";
+import "./RankingTable.css";
+import React, { useState } from "react";
 // import axios from 'axios';
-import { Data, rankData } from './RankData';
-import Select from '../../components/Select';
-import Table from '../../components/Table';
-import Modal from '../../components/Modal';
-import { modalData, teamModalData } from '../../components/ModalData';
-import { HandClick } from 'tabler-icons-react';
-
+import { Data, rankData } from "./RankData";
+import Select from "../../components/Select";
+import Table from "../../components/Table";
+import Modal from "../../components/Modal";
+import { modalData, teamModalData } from "../../components/ModalData";
+import { HandClick } from "tabler-icons-react";
 
 const Rank: React.FC = () => {
-
-
-  const years = ['2023', '2022', '2021'];
+  const years = ["2023", "2022", "2021"];
   const [selectedYear, setSelectedYear] = useState<string>("2023");
 
   //年度でフィルターをかける
-  const filterData = rankData.filter(item => item.year === selectedYear);
+  const filterData = rankData.filter((item) => item.year === selectedYear);
 
   // const [firtereData, setFirterData] = useState<Data[]>([]);
   // const [years, setYears] = useState<string[]>();
   //仮置きのセレクトボックス
-  const [select, setSelect] = useState('');
+  const [select, setSelect] = useState("");
 
-  const [sortOrder, setSortOrder] = useState<string>('ASC');
+  const [sortOrder, setSortOrder] = useState<string>("ASC");
 
- 
- //モーダルの開閉フラグ
- const[isModalOpen,setIsModalOpen]=useState<boolean>(false);
+  //モーダルの開閉フラグ
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-
- {/*バッグエンドでDBからデータを取ってくるのはコメントアウト*/}
+  /*バッグエンドでDBからデータを取ってくるのはコメントアウト*/
 
   // useEffect(() => {
   //   const fetchYears = async () => {
@@ -68,34 +63,40 @@ const Rank: React.FC = () => {
   //   setSortOrder(prevOrder=>prevOrder==='ASC'?'DESC':'ASC');
   // };
 
-  const [selectedTeam,setSelectedTeam]=useState<modalData|undefined>(undefined);
+  const filterdModalData = teamModalData
+    .filter((modal) => modal.year === selectedYear)
+    .sort((a, b) => a.rank - b.rank); //ランク昇順に並べる
+
+  console.log(filterdModalData);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   //ダブルクリックした行をモーダル表示
-  const dbClick=(obj:object)=>{
+  const dbClick = (obj: object) => {
     //テーブルのデータ
     const row = obj as Data;
     //モーダルのデータ
-    const matchData=teamModalData.find((modal)=>
-      modal.year===row.year &&
-      modal.teamName===row.team_name
+    const index = filterdModalData.findIndex(
+      (modal) => modal.year === row.year && modal.teamName === row.team_name
     );
-     if(matchData){
-      setSelectedTeam(matchData);
+    //選択した行と、モーダルの年度＆＆チーム名がマッチしていた時に、モーダルを開く。
+    if (index !== 1) {
+      setSelectedIndex(index);
       setIsModalOpen(true);
-     }
+    }
   };
 
-
-
+  const selectedTeam =
+    selectedIndex !== null ? filterdModalData[selectedIndex] : undefined;
+  console.log(selectedTeam);
 
   return (
     <>
       <Title>年間順位</Title>
       <InputWrapper label="シーズン" />
       {/*セレクトボックスは仮置き*/}
-      <div style={{ marginTop: '10px', marginBottom: '10px',}}>
+      <div style={{ marginTop: "10px", marginBottom: "10px" }}>
         <Select
-          style={{padding:'15px',width:'120px'}} 
+          style={{ padding: "15px", width: "120px" }}
           onChange={setSelectedYear}
           selectedYear={selectedYear}
           years={years}
@@ -108,18 +109,24 @@ const Rank: React.FC = () => {
         dbClick={dbClick}
       />
       {/*モーダルの呼び出し*/}
-      <div style={{marginTop:'10px'}}>
-          <button onClick={()=>setIsModalOpen(true)}>モーダルボタン</button>
-          <Modal 
-            modal={{isModalOpen,setIsModalOpen}} 
-            //参考演算子でデータがある場合（配列にする）とデータがない場合で空（配列で空）で判定する。
-            data={selectedTeam?[selectedTeam]:[]}/>
+      <div style={{ marginTop: "10px" }}>
+        <button onClick={() => setIsModalOpen(true)}>モーダルボタン</button>
+        <Modal
+          modal={{ isModalOpen, setIsModalOpen }}
+          //参考演算子でデータがある場合（配列にする）とデータがない場合で空（配列で空）で判定する。
+          data={selectedTeam ? [selectedTeam] : []}
+          currentIndex={selectedIndex}
+          setCurrentIndex={setSelectedIndex}
+          dataList={filterdModalData}
+        />
       </div>
-      
+
       {/*リーグ規則のガイダンス*/}
-      <div className='rule' style={{marginTop:'50px',padding:'20px'}}>
+      <div className="rule" style={{ marginTop: "50px", padding: "20px" }}>
         <h3>J1試合方式および勝敗の決定</h3>
-        <h4>90分間(前半&後半45分)の試合を行い、勝敗が決しない場合は引き分けとする。</h4>
+        <h4>
+          90分間(前半&後半45分)の試合を行い、勝敗が決しない場合は引き分けとする。
+        </h4>
         <li>勝点</li>
         <h4>勝利 : 3点, 引き分け : 1点, 敗戦 : 0点</h4>
         <h4>ACL出場圏内 プレーオフ出場圏 J2自動降格圏内</h4>

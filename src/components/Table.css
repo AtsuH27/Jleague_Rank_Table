@@ -3,10 +3,11 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left; 
+  text-align: left;
 }
 
 th {
@@ -17,16 +18,16 @@ th {
   vertical-align: bottom;
 }
 
-.acl{
-  background-color:#ccffd1;
+.acl {
+  background-color: #ccffd1;
 }
-.play_off{
-  background-color: #CCFFFF;
+.play_off {
+  background-color: #ccffff;
 }
-.relegation{
+.relegation {
   background-color: #bfbfbf;
 }
 
-tbody tr:hover{
+tbody tr:hover {
   background-color: #f6e7e7;
 }

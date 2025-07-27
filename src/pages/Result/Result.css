@@ -1,12 +1,12 @@
 /*src/Result.css*/
 
-.logos{
-    display: flex;
-    flex-wrap: wrap;
-    gap:10px;
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.team-logo{
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+.team-logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
